@@ -16,7 +16,7 @@ const ConfirmBooking = () => {
     const userId = localStorage.getItem('userId'); // Assuming userId is stored in localStorage
 
     axios
-      .get(`http://localhost:3001/users/my-profile?userId=${userId}`)
+      .get(`http://localhost:3000/users/my-profile?userId=${userId}`)
       .then((response) => {
         const fetchedEmail = response.data.data.email; // Fetch email from the response
         setEmail(fetchedEmail); // Update the email state
@@ -33,7 +33,7 @@ const ConfirmBooking = () => {
         };
 
         // Post the appointment data
-        return axios.post('http://localhost:3001/appointments/add-appointments', info);
+        return axios.post('http://localhost:3000/appointments/add-appointments', info);
       })
       .then((response) => {
         console.log('Appointment booked successfully', response);

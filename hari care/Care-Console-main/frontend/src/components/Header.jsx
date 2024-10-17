@@ -18,7 +18,7 @@ const Header = () => {
     console.log(userId);
 
     axios
-      .get(`http://localhost:3001/users/my-profile?userId=${userId}`)
+      .get(`http://localhost:3000/users/my-profile?userId=${userId}`)
       .then((response) => {
         setUserEmail(response.data.data.email);
         console.log(email);

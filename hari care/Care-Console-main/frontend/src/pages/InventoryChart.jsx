@@ -15,7 +15,7 @@ function InventoryChart() {
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/tablets/tablets')
+    axios.get('http://localhost:3000/tablets/tablets')
       .then(response => {
         const data = response.data;
         const labels = data.map(item => item.name);

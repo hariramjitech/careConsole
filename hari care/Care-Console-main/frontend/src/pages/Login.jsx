@@ -20,7 +20,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:3001/users/find-user', {
+      const response = await axios.get('http://localhost:3000/users/find-user', {
         params: { email, password },
       });
 

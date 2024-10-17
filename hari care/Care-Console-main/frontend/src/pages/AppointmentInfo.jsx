@@ -26,7 +26,7 @@ const AppointmentInfo = () => {
     };
 
     axios
-      .put(`http://localhost:3001/users/modify-appointments/${_id}`, data)
+      .put(`http://localhost:3000/users/modify-appointments/${_id}`, data)
       .then(() => {
         setAlertMessage('Prescription and Fees Added Successfully!');
         setAlertVisible(true);
@@ -52,7 +52,7 @@ const AppointmentInfo = () => {
   useEffect(() => {
     if (_id) {
       axios
-        .get(`http://localhost:3001/appointments/appointment-info?appointmentId=${_id}`)
+        .get(`http://localhost:3000/appointments/appointment-info?appointmentId=${_id}`)
         .then((response) => {
           const data = response.data.data;
           setEmail(data.email);
@@ -69,7 +69,7 @@ const AppointmentInfo = () => {
   useEffect(() => {
     if (email) {
       axios
-        .get(`http://localhost:3001/users/appointment-name?email=${email}`)
+        .get(`http://localhost:3000/users/appointment-name?email=${email}`)
         .then((response) => {
           setName(response.data.data.name);
         })

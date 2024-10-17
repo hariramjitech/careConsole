@@ -29,7 +29,7 @@ const MyProfile = () => {
       setUserId(storedUserId);
       // Fetch user details from backend
       axios
-        .get(`http://localhost:3001/users/my-profile?userId=${storedUserId}`)
+        .get(`http://localhost:3000/users/my-profile?userId=${storedUserId}`)
         .then((response) => {
           const { data } = response.data;
           setInitialUserData(data); // Save the initial user data
@@ -66,7 +66,7 @@ const MyProfile = () => {
     };
 
     axios
-      .put(`http://localhost:3001/users/edit-profile`, updatedUser)
+      .put(`http://localhost:3000/users/edit-profile`, updatedUser)
       .then((response) => {
         console.log('Profile updated', response.data);
         setIsEditing(false); // Switch back to non-editing mode

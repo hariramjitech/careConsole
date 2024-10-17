@@ -15,7 +15,7 @@ const AllAppointment = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/appointments/admin/all-appointments')
+      .get('http://localhost:3000/appointments/admin/all-appointments')
       .then((response) => {
         const data = response.data.data;
         setAppointmentsData(data);
