@@ -13,7 +13,7 @@ const EditTablet = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/tablets/tablet/${_id}`)
+      .get(`http://localhost:3001/tablets/tablet/${_id}`)
       .then((response) => {
         setName(response.data.name);
         setCategory(response.data.category);
@@ -37,7 +37,7 @@ const EditTablet = () => {
     };
 
     axios
-      .put(`http://localhost:3000/tablets/updateTablet/${_id}`, data)
+      .put(`http://localhost:3001/tablets/updateTablet/${_id}`, data)
       .then(() => {
         console.log('Edited Successfully');
         navigate('/tablets');

@@ -14,7 +14,7 @@ EmergencyAppointment = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Make a POST request to create a new appointment
-    axios.post('http://localhost:3000/appointments', {
+    axios.post('http://localhost:3001/appointments', {
       name,          // Include name
       email,         // Include email
       date,          // Include date

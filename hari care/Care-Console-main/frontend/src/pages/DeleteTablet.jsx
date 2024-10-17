@@ -10,7 +10,7 @@ const DeleteTablet = () => {
     console.log("Clicked");
 
     axios
-      .delete(`http://localhost:3000/tablets/deleteTablets/${_id}`)
+      .delete(`http://localhost:3001/tablets/deleteTablets/${_id}`)
       .then(() => {
         console.log("Tablet Info Deleted Successfully");
         alert("Tablet Info Deleted Successfully");

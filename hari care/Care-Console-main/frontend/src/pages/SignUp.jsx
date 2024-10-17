@@ -41,7 +41,7 @@ const SignUp = () => {
     setLoading(true);
 
     axios
-      .post('http://localhost:3000/users', data)
+      .post('http://localhost:3001/users', data)
       .then(() => {
         setLoading(false);
         setAlertMessage('Sign up successful! Redirecting to login...');

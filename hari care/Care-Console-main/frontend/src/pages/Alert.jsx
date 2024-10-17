@@ -6,7 +6,7 @@ import axios from 'axios'
 const Alert = () => {
 
         function sendMessage(){
-            axios.get('http://localhost:3000/admin/alert')
+            axios.get('http://localhost:3001/admin/alert')
             .then((response)=>{
                 console.log('Message Successfully Sent')
             })

@@ -18,7 +18,7 @@ const Appointment = () => {
   useEffect(() => {
     if (_id) {
       axios
-        .get(`http://localhost:3000/appointments/appointment-info?appointmentId=${_id}`)
+        .get(`http://localhost:3001/appointments/appointment-info?appointmentId=${_id}`)
         .then((response) => {
           const data = response.data.data;
           setEmail(data.email);
@@ -38,7 +38,7 @@ const Appointment = () => {
   useEffect(() => {
     if (email) {
       axios
-        .get(`http://localhost:3000/users/appointment-name?email=${email}`)
+        .get(`http://localhost:3001/users/appointment-name?email=${email}`)
         .then((response) => {
           setName(response.data.data.name);
         })
@@ -51,7 +51,7 @@ const Appointment = () => {
   function dele() {
     if (window.confirm("Are you sure about deleting this appointment?")) {
       axios
-        .delete(`http://localhost:3000/appointments/deleteAppointment/${_id}`)
+        .delete(`http://localhost:3001/appointments/deleteAppointment/${_id}`)
         .then(() => {
           console.log("Appointment Deleted Successfully");
           navigate('/');

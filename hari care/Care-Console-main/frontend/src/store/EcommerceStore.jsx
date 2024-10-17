@@ -13,7 +13,7 @@ const EcommerceStore = () => {
   // Fetch data from backend API
   useEffect(() => {
     axios
-      .get('http://localhost:3000/tablets/tablets')
+      .get('http://localhost:3001/tablets/tablets')
       .then((response) => {
         setTablets(response.data);
         setLoading(false);

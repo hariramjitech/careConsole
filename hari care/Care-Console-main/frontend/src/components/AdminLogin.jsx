@@ -15,7 +15,7 @@ const AdminLogin = () => {
         alert("Give a Valid Data")
       }
       try{
-        const response = await axios.get('http://localhost:3000/admin/find-admin', {
+        const response = await axios.get('http://localhost:3001/admin/find-admin', {
             params: { email, password } 
         });
         setAdminInfo(response.data)

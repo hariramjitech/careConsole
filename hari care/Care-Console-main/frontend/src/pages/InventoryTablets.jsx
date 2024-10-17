@@ -15,7 +15,7 @@ const InventoryTablets = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/tablets/tablets')
+      .get('http://localhost:3001/tablets/tablets')
       .then((response) => {
         setTabletsInfo(response.data);
         setLoading(false);

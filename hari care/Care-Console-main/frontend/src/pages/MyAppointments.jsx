@@ -13,7 +13,7 @@ const AllAppointment = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/appointments/my-appointments?email=${email}`)
+      .get(`http://localhost:3001/appointments/my-appointments?email=${email}`)
       .then((response) => {
         setAppointmentsData(response.data.data);
         console.log(response.data);

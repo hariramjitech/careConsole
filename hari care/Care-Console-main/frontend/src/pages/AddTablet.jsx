@@ -21,7 +21,7 @@ const AddTablet = () => {
         };
 
         axios
-            .post('http://localhost:3000/tablets/add-tablet', data)
+            .post('http://localhost:3001/tablets/add-tablet', data)
             .then(() => {
                 setAlert({ message: 'Tablet added successfully!', type: 'success', visible: true });
                 setTimeout(() => {
